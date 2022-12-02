@@ -1,0 +1,67 @@
+.Navigation {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    @media only srceen and (max-width: 600px) {
+        height: 100px;
+    }
+    transition-timing-function: ease-in;
+    transition: all 1s;
+}
+
+.navContainer {
+    background-color: transparent;
+    display: flex;
+    height: 100%;
+    @media only srceen and (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    width: 126px;
+    cursor: pointer;
+    img {
+        width: 100%;
+    }
+}
+
+.navSearch {
+    display: flex;
+    align-items: center;
+    &:hover .iconSearch {
+        color: rgb(116, 110, 110);
+    }
+    input {
+        font-size: 14px;
+        border: 1px solid#fff;
+        outline:#222;
+        color: white;
+        outline: none;
+        width: 0;
+        opacity: 0;
+        background: #222;
+        border-radius: 5px;
+        padding: 4px;
+        cursor: pointer;
+        transition: width 0.5s;
+    
+        &:focus {
+            padding-left: 26px;
+            width: 300px;
+            cursor: text;
+            opacity: 1;
+            border-radius: 5px;
+        }
+    }
+}
+
+.iconSearch {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transform: translate(30px, 0px);
+    color: #bbb;
+}
